@@ -1,0 +1,20 @@
+server:
+  port: 8088
+
+spring:
+  rabbitmq:
+    host: 192.168.0.100
+    port: 5672
+    virtual-host: /motto
+    username: motto
+    password: motto
+    listener:
+      simple:
+        concurrency: 1
+        prefetch: 10
+        acknowledge-mode: manual
+#        retry:
+#          enabled: true # 允许消息消费失败的重试
+#          max-attempts: 3 # 消息最多消费次数3次
+#          initial-interval: 2000 # 消息多次消费的间隔2秒
+

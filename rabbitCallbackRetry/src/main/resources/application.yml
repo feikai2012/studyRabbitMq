@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: rabbtmq-callback
+  profiles:
+    active: dev #默认为开发环境
+
+
+# 消息队列定义
+rabbitmq:
+  queue:
+    name:
+      cancelOrder: cancelOrderQueue
+
